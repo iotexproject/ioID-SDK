@@ -1,12 +1,12 @@
-# ioConnect
+# ioID-SDK
 
 An embedded SDK for connecting smart devices to Web3
 
 ![SDK_Design_Overall](./doc/image/SDK_Design_Overall.png)
 
-ioConnect SDK is based on the previously developed PSACrypto SDK and adds implementations of protocols such as DID, DIDDoc, JOSE, and DIDComm on top of ARM PSA functionality. It is implemented in C language and enhances the cross-platform compatibility of the SDK.
+ioID-SDK is based on the previously developed PSACrypto SDK and adds implementations of protocols such as DID, DIDDoc, JOSE, and DIDComm on top of ARM PSA functionality. It is implemented in C language and enhances the cross-platform compatibility of the SDK.
 
-The ioConnect SDK is primarily divided into two parts: the Core Layer and the Platform Adaptation Layer (PAL). The Core Layer provides functionality independent of the hardware platform, including implementations of PSA, DID, JOSE, and other protocols. The PAL layer optimizes the code according to the specific characteristics of different hardware platforms. For example, for the ESP platform, the SDK relies on its event messaging mechanism for code optimization, while for the Arduino platform, it implements communication functionality by inheriting the base class.
+The ioID-SDK is primarily divided into two parts: the Core Layer and the Platform Adaptation Layer (PAL). The Core Layer provides functionality independent of the hardware platform, including implementations of PSA, DID, JOSE, and other protocols. The PAL layer optimizes the code according to the specific characteristics of different hardware platforms. For example, for the ESP platform, the SDK relies on its event messaging mechanism for code optimization, while for the Arduino platform, it implements communication functionality by inheriting the base class.
 
 ![ioConnect_repo](./doc/image/ioConnect_repo.png)
 
@@ -18,11 +18,11 @@ The `dids` folder mainly implements the functionality of the DID, DIDComm, and V
 
 The `jose` folder mainly implements the JOSE protocol suite, including JWK, JWS, JWE, and others.
 
-![ioConnect_repo_2](./doc/image/ioConnect_repo_2.png)
+![ioID-SDK_repo_2](./doc/image/ioConnect_repo_2.png)
 
 In the file structure of the Platform Adaptation Layer (PAL), the SDK mainly implements methods for connecting to IoTeX decentralized network nodes. For example, the `DeviceRegister` component provides a method for terminal devices to register with the IoTeX Wallet, and the `Sprout` component allows easy communication with Sprout.
 
-![ioConnect_repo_3](./doc/image/ioConnect_repo_3.png)
+![ioID-SDK_repo_3](./doc/image/ioConnect_repo_3.png)
 
 
 
@@ -45,32 +45,32 @@ In the file structure of the Platform Adaptation Layer (PAL), the SDK mainly imp
 
 ### 	How to Generate a DID for a device
 
-Please view the documentation : **[How to Generate a DID for a device Using ioConnect SDK](./doc/How_to_Generate_a_DID_for_a_device_Using_ioConnectSDK.md)**
+Please view the documentation : **[How to Generate a DID for a device Using ioID SDK](./doc/How_to_Generate_a_DID_for_a_device_Using_ioID-SDK.md)**
 
 
 ### 	How to Generate a DIDDoc
 
-Please view the documentation : **[How to Generate a DID Document Using ioConnect SDK](./doc/How_to_Generate_a_DID_Document_Using_ioConnectSDK.md)**
+Please view the documentation : **[How to Generate a DID Document Using ioID SDK](./doc/How_to_Generate_a_DID_Document_Using_ioID-SDK.md)**
 
 ### 	How to Generate a Verifiable Credentials
 
-Please view the documentation : **[How to Generate a Verifiable Credentials Using ioConnect SDK](./doc/How_to_Generate_a_Verifiable_Credentials_Using_ioConnectSDK.md)**
+Please view the documentation : **[How to Generate a Verifiable Credentials Using ioID SDK](./doc/How_to_Generate_a_Verifiable_Credentials_Using_ioID-SDK.md)**
 
 ### 	How to Generate a JWS
 
-Please view the documentation : **[How_to generate_a_JWS](./doc/How_to_use_the_ioConnectSDK_to_generate_a_JWS_Serialization.md)**
+Please view the documentation : **[How_to generate_a_JWS](./doc/How_to_use_the_ioID-SDK_to_generate_a_JWS_Serialization.md)**
 
 ### 	How to Generate a JWE
 
-Please view the documentation : **[How_to generate_a_JWE](./doc/How_to_use_the_ioConnectSDK_to_generate_a_JWE_Serialization.md)**
+Please view the documentation : **[How_to generate_a_JWE](./doc/How_to_use_the_ioID-SDK_to_generate_a_JWE_Serialization.md)**
 
 ### 	How to Generate a JWT
 
-Please view the documentation : **[How_to generate_a_JWT](./doc/How_to_use_the_ioConnectSDK_to_generate_a_JWT_Serialization.md)**
+Please view the documentation : **[How_to generate_a_JWT](./doc/How_to_use_the_ioID-SDK_to_generate_a_JWT_Serialization.md)**
 
 ### 	How to Generate a DIDComm
 
-Please view the documentation : **[How_to generate_a_DIDComm](./doc/How_to_use_the_ioConnectSDK_to_generate_a_DIDComm.md)**
+Please view the documentation : **[How_to generate_a_DIDComm](./doc/How_to_use_the_ioID-SDK_to_generate_a_DIDComm.md)**
 
 
 
