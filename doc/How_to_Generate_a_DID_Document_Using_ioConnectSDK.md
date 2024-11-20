@@ -1,6 +1,6 @@
 
 
-# How to Generate a DID Document Using ioConnectSDK
+# How to Generate a DID Document Using ioID-SDK
 
 ​		A DIDDoc is a set of data describing the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects), including mechanisms, such as cryptographic public keys, that the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects) or a [DID delegate](https://www.w3.org/TR/did-core/#dfn-did-delegate) can use to [authenticate](https://www.w3.org/TR/did-core/#dfn-authenticated) itself and prove its association with the [DID](https://www.w3.org/TR/did-core/#dfn-decentralized-identifiers). A DID document might have one or more different [representations](https://www.w3.org/TR/did-core/#dfn-representations)
 
