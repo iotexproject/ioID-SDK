@@ -8,8 +8,6 @@ ioID-SDK is based on the previously developed PSACrypto SDK and adds implementat
 
 The ioID-SDK is primarily divided into two parts: the Core Layer and the Platform Adaptation Layer (PAL). The Core Layer provides functionality independent of the hardware platform, including implementations of PSA, DID, JOSE, and other protocols. The PAL layer optimizes the code according to the specific characteristics of different hardware platforms. For example, for the ESP platform, the SDK relies on its event messaging mechanism for code optimization, while for the Arduino platform, it implements communication functionality by inheriting the base class.
 
-![ioConnect_repo](./doc/image/ioConnect_repo.png)
-
 In the file structure of the Core Layer:
 
 The `psa` and `crypto` folders primarily implement the Platform Security Architecture (PSA), which allows developers to use standardized and unified APIs to handle cryptography-related functions without concerning themselves with specific code implementation.
