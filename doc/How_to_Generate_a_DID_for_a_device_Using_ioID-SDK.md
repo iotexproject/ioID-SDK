@@ -1,6 +1,6 @@
 
 
-# How to Generate a DID for a device Using ioConnectSDK
+# How to Generate a DID for a device Using ioID-SDK
 
 
 

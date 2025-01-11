@@ -1,6 +1,6 @@
 
 
-# How to Generate a Verifiable Credentials Using ioConnectSDK
+# How to Generate a Verifiable Credentials Using ioID-SDK
 
 
 
