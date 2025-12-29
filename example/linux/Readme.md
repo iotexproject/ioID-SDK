@@ -48,3 +48,7 @@ Please view the documentation : **[Compile & Build](./dids/doc/readme.md)**
 ### / device_register
 
 Please view the documentation : **[Compile & Build](./deviceregister/doc/readme.md)**
+
+### / Solar Farm 
+
+Please view the documentation : **[Compile & Build](./solarfarm/doc/readme.md)**
