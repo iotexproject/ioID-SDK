@@ -5,10 +5,11 @@ project (SolarFarmDemo)
 option (COMPILE_LIB_SET "Set ioConnectCore compile to a Lib" ON)
 
 include_directories(./core/src)
+include_directories(./pal .)
 
 add_compile_options(-g -O0 -Wno-implicit-function-declaration)
 
-add_executable(SolarFarmDemo main.c) 
+add_executable(SolarFarmDemo main.c ./pal/https.c ./pal/pal.c) 
 
 add_subdirectory(./core)
 
