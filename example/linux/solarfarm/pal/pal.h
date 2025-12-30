@@ -16,6 +16,7 @@
 
 int32_t iotex_pal_init(void);
 int32_t iotex_pal_send_packet(const char *post_data);
-char * iotex_pal_build_packet(uint64_t value);
+int32_t iotex_pal_build_and_send_packet(uint64_t value);
+char *  iotex_pal_build_packet(uint64_t value);
 
 #endif

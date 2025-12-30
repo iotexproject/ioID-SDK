@@ -16,23 +16,22 @@ int main (void) {
 
     int value = 5;
 
-    while (true)
-    {    
-        sleep(5);
-
+    while (true) {    
         if (value >= 10)
-            value = 5;
-
+        value = 5;
+        
         message_body = iotex_pal_build_packet(value++);
         if (NULL == message_body)
-            continue;
-
+        continue;
+        
         iotex_pal_send_packet(message_body);
         
         if (message_body) {
             free (message_body);
             message_body = NULL;
-        }        
+        }
+
+        sleep(60);
     }
 
 // iotex_jwk_destroy(mySignJWK);        

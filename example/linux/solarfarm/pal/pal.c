@@ -158,10 +158,10 @@ char * iotex_pal_build_packet(uint64_t value)
     uint8_t hash_input[48] = {0}, signature[64] = {0};
     size_t  hash_size = 0, signature_length = 0, publicKey_length = 0;
 
-    char temp_str[64 * 2 + 2 + 1] = {0};
+    char temp_str[64 * 2 + 4 + 1] = {0};
     temp_str[0] = '0';
     temp_str[1] = 'x';
-
+    
     uint64_t now = iotex_pal_utils_get_utc_timestamp_ms();  
 
 #if IOTEX_SOLAR_FARM_DEMO_TEST
@@ -185,7 +185,9 @@ char * iotex_pal_build_packet(uint64_t value)
     if (publicKey_length != 64)
         goto exit;
 
-    iotex_utils_convert_hex_to_str(publicKey , publicKey_length, temp_str + 2);
+    temp_str[2] = '0';
+    temp_str[3] = '4';
+    iotex_utils_convert_hex_to_str(publicKey , publicKey_length, temp_str + 4);
 
     cJSON_AddStringToObject(payload_json, "publicKey", temp_str);
 #endif
@@ -277,7 +279,8 @@ char * iotex_pal_build_packet(uint64_t value)
     }
     printf("\n");
 #endif
-        
+     
+    memset(temp_str + 2, 0, sizeof(temp_str) - 2);
     iotex_utils_convert_hex_to_str(signature , signature_length, temp_str + 2);
 
     cJSON_AddStringToObject(upload_json, "signature", temp_str);
@@ -302,3 +305,18 @@ exit:
     return sprout_message_serialize;
 }
 
+int32_t iotex_pal_build_and_send_packet(uint64_t value) {
+
+    int32_t result = IOTEX_SOLAR_FARM_DEMO_ERR_SUCCESS;
+    
+    char * message = iotex_pal_build_packet(value);
+
+    if (NULL == message)
+        return IOTEX_SOLAR_FARM_DEMO_ERR_INTERNAL;
+
+    result = iotex_pal_send_packet(message);
+
+    free (message);
+    
+    return result;
+}
